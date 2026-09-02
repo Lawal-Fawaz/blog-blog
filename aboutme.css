@@ -1,0 +1,38 @@
+body{
+    background-color:#ffff;
+    border: 50px;
+    padding: 50px;
+    margin: 70px;
+    justify-content: center;
+
+}
+.aboutme{
+    padding: 100px;
+    text-align: center;
+    margin-top: -100px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+.link{
+    text-align: center;
+    margin-top: -100px;
+    
+}
+.link a{
+    color: black;
+    text-decoration: none;
+}
+
+.link a:hover{
+    color: aliceblue;
+}
+
+.para{
+    text-align: center;
+    text-decoration: solid;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+text-align-last: justify;
+}

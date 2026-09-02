@@ -3,35 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Education - Fawaz Blog</title>
+    <link rel="stylesheet" href="education.css" />
   </head>
-  <nav>
-    <a href="index.html">Home</a> | <a href="about me.html">About</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="education.html">Education</a> |
-  </nav>
 
   <body>
-    <h2>Education</h2>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about me.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="education.html" aria-current="page">Education</a>
+    </nav>
 
-    <p>
-      I am currently studying Computer Science at
-      <strong>Kwara State University (KWASU)</strong>.
-    </p>
+    <main class="education-page">
+      <header class="page-header">
+        <p class="eyebrow">Learning in progress</p>
+        <h1>Education</h1>
+        <p class="intro">
+          Building a practical foundation in computer science, one project and
+          one new idea at a time.
+        </p>
+      </header>
 
-    <p>
-      I am currently in <strong>400 Level</strong> and working towards
-      completing my degree in Computer Science.
-    </p>
+      <section class="timeline" aria-label="Education milestones">
+        <article class="milestone">
+          <span class="milestone-number">01</span>
+          <div>
+            <h2>Computer Science</h2>
+            <p>
+              I am currently studying Computer Science at
+              <strong>Kwara State University (KWASU)</strong>.
+            </p>
+          </div>
+        </article>
 
-    <p>
-      During my studies, I have developed an interest in programming, web
-      development, artificial intelligence, and software development.
-    </p>
+        <article class="milestone">
+          <span class="milestone-number">02</span>
+          <div>
+            <h2>400 Level</h2>
+            <p>
+              I am working towards completing my degree and taking the next step
+              in my development journey.
+            </p>
+          </div>
+        </article>
 
-    <p>
-      I am continuously improving my technical skills by working on practical
-      projects and learning new technologies.
-    </p>
+        <article class="milestone">
+          <span class="milestone-number">03</span>
+          <div>
+            <h2>Areas of interest</h2>
+            <p>
+              My studies have led me toward programming, web development,
+              artificial intelligence, and software development.
+            </p>
+          </div>
+        </article>
+
+        <article class="milestone">
+          <span class="milestone-number">04</span>
+          <div>
+            <h2>Learning by building</h2>
+            <p>
+              I continue to improve my technical skills through practical
+              projects and by exploring new technologies.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

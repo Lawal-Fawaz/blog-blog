@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+:root {
+  --background-color: #f5f5f5;
+  --black-color: #000;
+  --dark-color: #1a1a1a;
+  --white-color: white;
+  --blue-color: #008cba;
+  --gray-color: gray;
+  --brown-color: burlywood;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--background-color);
   padding: 105px 50px 50px;
   margin: 0;
 }
 
 /* Heading */
 .head {
-  color: #000;
+  color: var(--black-color);
   font-size: large;
   font-style: italic;
   padding: 40px 70px;
@@ -34,7 +44,7 @@ body {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, var(--black-color) 0%, var(--dark-color) 100%);
   padding: 15px 20px;
   z-index: 1000;
   box-shadow: 2px 0 10px #120101;
@@ -43,7 +53,7 @@ body {
 .nav a {
   padding: 10px 15px;
   border-bottom: 3px solid transparent;
-  color: white;
+  color: var(--white-color);
   font-weight: bold;
   font-style: italic;
   text-decoration: none;
@@ -53,8 +63,8 @@ body {
 
 .nav a:hover,
 .nav a.active {
-  color: #008cba;
-  border-bottom-color: #008cba;
+  color: var(--blue-color);
+  border-bottom-color: var(--blue-color);
 }
 
 @media (max-width: 600px) {
@@ -101,10 +111,10 @@ body {
 
 .footer a {
   text-decoration: none;
-  color: black;
-  background-color: gray;
+  color: var(--black-color);
+  background-color: var(--gray-color);
 }
 
 .footer a:hover {
-  color: burlywood;
+  color: var(--brown-color);
 }

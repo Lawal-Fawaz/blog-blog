@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
 :root {
-  --ink: #17242b;
-  --muted: #657177;
-  --paper: #f7f4ed;
-  --line: #d8d1c3;
-  --accent: #e36d44;
-  --nav: #17242b;
+  --dark-color: #17242b;
+  --light-color: #f5f5f5;
+  --white-color: white;
+  --blue-color: #008cba;
+  --gray-color: #555;
 }
 
 * {
@@ -14,172 +11,120 @@
 }
 
 body {
-  min-height: 100vh;
   margin: 0;
-  color: var(--ink);
-  background: var(--paper);
-  font-family: 'DM Sans', sans-serif;
+  padding: 100px 20px 40px;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-family: Arial, sans-serif;
 }
 
 .nav {
   position: fixed;
-  inset: 0 auto 0 0;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  width: 230px;
-  padding: 42px 24px;
-  background: var(--nav);
-  box-shadow: 12px 0 35px rgba(23, 36, 43, 0.08);
-}
-
-.nav::before {
-  width: 35px;
-  height: 4px;
-  margin: 0 0 72px 14px;
-  background: var(--accent);
-  content: '';
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--dark-color);
+  z-index: 1000;
 }
 
 .nav a {
-  padding: 15px 14px;
-  border-left: 3px solid transparent;
-  color: #c7d0d1;
-  font-size: 0.95rem;
-  font-weight: 700;
+  padding: 10px 15px;
+  color: var(--white-color);
+  font-weight: bold;
   text-decoration: none;
-  transition: color 180ms ease, border-color 180ms ease, padding-left 180ms ease;
 }
 
 .nav a:hover,
 .nav a.active {
-  padding-left: 20px;
-  border-color: var(--accent);
-  color: #fff;
+  color: var(--blue-color);
 }
 
 .education-page {
-  width: min(920px, calc(100% - 230px));
-  min-height: 100vh;
-  margin-left: 230px;
-  padding: 90px clamp(28px, 8vw, 120px) 80px;
-  background: radial-gradient(circle at 95% 5%, #f0dfc7 0, transparent 28%), var(--paper);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page-header {
-  max-width: 650px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: var(--white-color);
+  border-bottom: 4px solid var(--blue-color);
+  text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 18px;
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: var(--blue-color);
+  font-weight: bold;
 }
 
 h1,
 h2 {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
 }
 
 h1 {
-  font-size: clamp(3.25rem, 8vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: 0;
+  font-size: 40px;
 }
 
 .intro {
-  max-width: 520px;
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 1.1rem;
-  line-height: 1.7;
+  margin: 15px 0 0;
+  color: var(--gray-color);
+  line-height: 1.6;
 }
 
 .timeline {
-  max-width: 650px;
+  background-color: var(--white-color);
+  padding: 10px 30px;
 }
 
 .milestone {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 24px;
-  padding: 30px 0;
-  border-bottom: 1px solid var(--line);
-  animation: reveal 500ms ease both;
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.milestone:nth-child(2) { animation-delay: 80ms; }
-.milestone:nth-child(3) { animation-delay: 160ms; }
-.milestone:nth-child(4) { animation-delay: 240ms; }
+.milestone:last-child {
+  border-bottom: none;
+}
 
 .milestone-number {
-  color: var(--accent);
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
+  color: var(--blue-color);
+  font-weight: bold;
 }
 
 .milestone h2 {
-  font-size: 1.3rem;
+  margin-top: 8px;
+  font-size: 22px;
 }
 
 .milestone p {
-  margin: 10px 0 0;
-  color: var(--muted);
-  line-height: 1.7;
+  color: var(--gray-color);
+  line-height: 1.6;
 }
 
 strong {
-  color: var(--ink);
-}
-
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  color: var(--dark-color);
 }
 
 @media (max-width: 700px) {
   .nav {
-    position: static;
-    flex-direction: row;
-    width: 100%;
-    padding: 14px 16px;
+    justify-content: flex-start;
     overflow-x: auto;
   }
 
-  .nav::before { display: none; }
-
   .nav a {
-    flex: 0 0 auto;
-    padding: 10px 12px;
-    border-left: 0;
-    border-bottom: 3px solid transparent;
-  }
-
-  .nav a:hover,
-  .nav a.active {
-    padding-left: 12px;
-    border-bottom-color: var(--accent);
+    white-space: nowrap;
   }
 
   .education-page {
     width: 100%;
-    min-height: auto;
-    margin-left: 0;
-    padding: 58px 24px 50px;
   }
 
-  .milestone {
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
+  .page-header,
+  .timeline {
+    padding: 20px;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .milestone { animation: none; }
 }
